@@ -11,7 +11,6 @@ student_types = [
      ('member', 'member'),
 
 ]
-    
 class Student(models.Model):
     username = models.CharField(max_length=100, unique=True)
     first_name = models.CharField(max_length=200, null=True, blank=True)
@@ -28,6 +27,7 @@ class Student(models.Model):
 
 class Student_Profile(models.Model):
     student = models.OneToOneField(Student,on_delete=models.CASCADE)
+    # username = models.CharField(max_length=100, unique=True)
     bio = models.TextField()
     date_of_birth =models.DateField()
     address = models.CharField(max_length=300)

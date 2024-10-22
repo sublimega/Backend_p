@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Student,Program,Student_Profile,CohortGroup
 
 # Register your models here.
+from .models import Student,Program,Student_Profile,CohortGroup
 
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
